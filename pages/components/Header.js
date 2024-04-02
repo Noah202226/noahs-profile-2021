@@ -70,7 +70,7 @@ export default function Header() {
                 fontFamily: "Lato, sans-serif",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "inherit",
+                color: "white",
                 textDecoration: "none",
               }}
             >
@@ -85,7 +85,7 @@ export default function Header() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="white"
             >
               <MenuIcon />
             </IconButton>
@@ -134,7 +134,7 @@ export default function Header() {
                 fontFamily: "Lato, sans-serif",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "inherit",
+                color: "white",
                 textDecoration: "none",
               }}
             >
@@ -171,7 +171,7 @@ export default function Header() {
             <Tooltip title="Download CV" arrow>
               <IconButton href="/Noah-Update-CV.pdf" target="_blank" download>
                 <Image
-                  src={"/download-resume.png"}
+                  src={"/download-pdf.svg"}
                   alt="download resume"
                   width={20}
                   height={20}

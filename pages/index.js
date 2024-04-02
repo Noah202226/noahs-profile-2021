@@ -141,7 +141,7 @@ export default function Home() {
           }}
           className="card developer"
           padding={2}
-          my={{ xs: 1, md: 1 }}
+          my={{ xs: 10, md: 1 }}
         >
           <Typography
             variant="h4"

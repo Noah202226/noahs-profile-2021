@@ -17,7 +17,14 @@ export default function Layout({ children }) {
   return (
     <ThemeProvider theme={modifyTheme}>
       {/* Hero */}
-      <Box id="hero">
+      <div className="hero">
+  <video autoPlay muted loop id="video-bg">
+    <source src="/coding-bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+
+      <Box id="hero" className="content">
         <Header />
         <Stack
           className="card"
@@ -62,7 +69,7 @@ export default function Layout({ children }) {
                 sx={{
                   transition: ".5s ease",
                   fontStyle: "italic",
-                  color: "black",
+                  color: "white",
                   letterSpacing: ".5rem",
                 }}
               >
@@ -90,7 +97,8 @@ export default function Layout({ children }) {
               textAlign={{ xs: "left", md: "center" }}
               fontSize={{ xs: 22, md: 28, lg: 30 }}
               letterSpacing={2}
-              bgcolor={"var(---div-title-bg)"}
+              bgcolor={"#202124"}
+              color={'black !important'}
               p={2}
               borderRadius={5}
               marginY={{ xs: 2, md: 2 }}
@@ -108,6 +116,8 @@ export default function Layout({ children }) {
           </section>
         </Stack>
       </Box>
+      </div>
+
 
       <Container container="true">{children}</Container>
     </ThemeProvider>

@@ -67,31 +67,25 @@ const Contact = () => {
           <Typography
             variant="body"
             sx={{
-              fontSize: { xs: 36, md: 28, lg: 22 },
+              fontSize: { xs: 18, md: 28, lg: 22 },
               my: { xs: 5, md: 0 },
               alignItems: 'end',
-              justifyContent: 'end'
+              justifyContent: 'end',
+              color: 'black'
             }}
           >
             Contact: 09456738504
-          </Typography>
-          <Typography
-            variant="body"
-            sx={{
-              fontSize: { xs: 36, md: 28, lg: 22 },
-              my: { xs: 5, md: 0 },
-              alignItems: 'self-start',
-              justifyContent: 'start'
-            }}
-          >
+            <br />
             Email: noaligpitan@gmail.com
           </Typography>
+         
           <Typography
             variant="body"
             sx={{
               textAlign: { xs: "center", md: "left" },
-              fontSize: { xs: 36, md: 28, lg: 16 },
+              fontSize: { xs: 18, md: 28, lg: 16 },
               my: { xs: 5, md: 2 },
+              color: 'black'
             }}
           >
             If you have questions and want to get in touch, use the form. I will
@@ -112,6 +106,7 @@ const Contact = () => {
             fontSize: { xs: 36, md: 28, lg: 46 },
             fontFamily: "Lato, sans-serif",
             my: { xs: 0, md: 2 },
+            color: 'black'
             // fontStyle: "italic",
           }}
         >

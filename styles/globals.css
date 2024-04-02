@@ -1,7 +1,7 @@
 :root {
-  ---font-color: #000000;
+  ---font-color: white;
 
-  ---contact-bg: rgba(56, 193, 236, 0.8);
+  ---contact-bg: #202124;
   ---div-title-bg: rgb(246, 235, 230);
 }
 
@@ -9,13 +9,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: white;
+}
+
+p{
+  color: black;
 }
 body {
   background-repeat: no-repeat;
   background-size: contain;
 
   background-color: var(---contact-bg);
-  color: black;
+  color: var(---font-color);
   font-family: "Lato", sans-serif !important;
   overflow-x: hidden;
 }
@@ -40,10 +45,33 @@ body::-webkit-scrollbar-thumb:hover {
   background: #0b1f22;
 }
 
+.hero {
+  position: relative;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+
+}
+
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: .8;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+
 #hero {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../public/page-turner.svg");
+  background-image: url("../public/coding-bg.mp4");
 }
 
 ul {
@@ -53,6 +81,10 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+a:hover{
+  color: #202124;
+  text-shadow: #f1f1f1 3px 2px 1px;
+}
 
 em {
   color: crimson;
@@ -61,7 +93,7 @@ em {
 
 .navbar {
   transition: all 0.5s ease-in !important;
-  color: #555 !important;
+  color: white !important;
   background: var(---contact-bg) !important;
 }
 
@@ -94,6 +126,7 @@ em {
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.2rem;
+  color: white;
 }
 
 .layout-images {
@@ -313,10 +346,10 @@ em {
   height: 50px;
   width: 30px;
 
-  border: 2px solid black;
+  border: 2px solid white;
   position: absolute;
   left: 50%;
-  bottom: 1rem;
+  bottom: 2rem;
 
   border-radius: 1rem;
 }
@@ -327,7 +360,7 @@ em {
   position: absolute;
   top: 20%;
   left: 50%;
-  border: 2px solid black;
+  border: 2px solid white;
 
   height: 5px;
   width: 5px;
@@ -369,7 +402,7 @@ em {
   }
 
   .button-scroll {
-    bottom: .5rem;
+    bottom: -5.5rem;
   }
 }
 

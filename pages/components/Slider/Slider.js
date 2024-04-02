@@ -42,20 +42,21 @@ const Slider = ({
   return (
     <div className="container-slider">
       <div className="slider-card">
-        <Typography variant="h6" textAlign={"right"}>
+        <Typography variant="h6" textAlign={"right"} color={'black'}>
           {appTitle}
         </Typography>
         <Typography>{appDescription}</Typography>
       </div>
       {images?.map((obj, index) => {
         // Calculate the image URL based on the slideIndex
-        console.log(index + 1);
-        console.log(obj.img);
+        // console.log(index + 1);
+        // console.log(obj.img);
         const imageUrl = `/${index + 1}.PNG`; // Change this URL pattern as needed
 
         return (
           <Link href={imageUrl} target="_blank">
             <div
+              onClick={() => console.log(imageUrl)}
               key={obj.id}
               className={
                 slideIndex === index + 1 ? "slide active-anim" : "slide"
