@@ -146,7 +146,7 @@ export default function Home() {
           <Typography
             variant="h4"
             sx={{
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "left", md: "left" },
               fontSize: { xs: 50, md: 28, lg: 42 },
               fontFamily: "Lato, sans-serif",
               mb: { xs: 3, md: 6 },
@@ -164,8 +164,8 @@ export default function Home() {
                     letterSpacing: 5,
                     color: "var(---div-title-bg)",
                     textShadow: "2px 2px 2px black",
-                    textAlign: { xs: "left", md: "left" },
-                    fontSize: { xs: 48, md: 28, lg: 42 },
+                    textAlign: { xs: "center", md: "left" },
+                    fontSize: { xs: 36, md: 28, lg: 42 },
                     fontFamily: "Lato, sans-serif",
                   }}
                 >
@@ -355,8 +355,8 @@ export default function Home() {
                     letterSpacing: 5,
                     color: "var(---div-title-bg)",
                     textShadow: "2px 2px 2px black",
-                    textAlign: { xs: "left", md: "left" },
-                    fontSize: { xs: 48, md: 28, lg: 42 },
+                    textAlign: { xs: "center", md: "left" },
+                    fontSize: { xs: 36, md: 28, lg: 42 },
                     fontFamily: "Lato, sans-serif",
                     mt: { xs: 3, md: 6 },
                   }}
@@ -464,8 +464,8 @@ export default function Home() {
                     letterSpacing: 5,
                     color: "var(---div-title-bg)",
                     textShadow: "2px 2px 2px black",
-                    textAlign: { xs: "left", md: "left" },
-                    fontSize: { xs: 48, md: 28, lg: 42 },
+                    textAlign: { xs: "center", md: "left" },
+                    fontSize: { xs: 36, md: 28, lg: 42 },
                     fontFamily: "Lato, sans-serif",
                     mt: { xs: 3, md: 6 },
                   }}
@@ -578,7 +578,7 @@ export default function Home() {
         >
           <Typography
             variant="h4"
-            textAlign={{ xs: "center", md: "left" }}
+            textAlign={{ xs: "left", md: "left" }}
             sx={{
               width: "100%",
               fontSize: { xs: 50, md: 28, lg: 42 },
@@ -614,7 +614,7 @@ export default function Home() {
               color: "var(---div-title-bg)",
               textShadow: "2px 2px 2px black",
               textAlign: { xs: "left", md: "left" },
-              fontSize: { xs: 48, md: 28, lg: 42 },
+              fontSize: { xs: 36, md: 28, lg: 42 },
               fontFamily: "Lato, sans-serif",
             }}
           >
@@ -687,7 +687,7 @@ export default function Home() {
                 textShadow: "2px 2px 2px black",
                 fontFamily: "Lato, sans-serif",
                 textAlign: { xs: "left", md: "left" },
-                fontSize: { xs: 48, md: 28, lg: 42 },
+                fontSize: { xs: 36, md: 28, lg: 42 },
                 mt: { xs: 3, md: 6 },
               }}
             >

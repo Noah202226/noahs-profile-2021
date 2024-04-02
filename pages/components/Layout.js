@@ -33,7 +33,7 @@ export default function Layout({ children }) {
           alignItems={"center"}
           justifyContent="space-around"
           sx={{
-            height: { xs: "100vh", lg: "100vh" },
+            height: { xs: "100%", lg: "100vh" },
           }}
         >
           <Box
@@ -44,19 +44,19 @@ export default function Layout({ children }) {
               height: { xs: "100vh", lg: "75%" },
             }}
             alignItems={"center"}
-            justifyContent={{ xs: "space-evenly" }}
+            justifyContent={{ xs: "start", md: 'space-between' }}
           >
             <Box>
               <Typography
                 variant="h1"
                 textAlign={{ xs: "left", md: "center" }}
-                fontSize={{ xs: 70, md: 76, lg: 106 }}
-                marginY={{ xs: 2, md: 0 }}
+                fontSize={{ xs: 60, md: 76, lg: 106 }}
+                marginY={{ xs: 1, md: 0 }}
                 marginLeft={{ xs: 2, md: 2 }}
                 letterSpacing={5}
-                sx={{ transition: ".5s ease" }}
+                sx={{ transition: ".5s ease", textShadow: {xs: '2px 2px 2px black', md: '0'} }}
               >
-                {<Typer textToType={"NOAH LIGPITAN"} speed={100} />}
+                {<Typer textToType={"NOA LIGPITAN"} speed={100} />}
               </Typography>
 
               <Typography
@@ -66,11 +66,13 @@ export default function Layout({ children }) {
                 marginY={{ xs: 0, md: 2 }}
                 marginLeft={{ xs: 2, md: 2 }}
                 letterSpacing={5}
+                
                 sx={{
                   transition: ".5s ease",
                   fontStyle: "italic",
                   color: "white",
                   letterSpacing: ".5rem",
+                  textShadow: {xs: '2px 2px 2px black', md: '0'}
                 }}
               >
                 {<Typer textToType={"Software Developer"} speed={50} />}
@@ -80,10 +82,11 @@ export default function Layout({ children }) {
             <Typography
               variant="h6"
               textAlign={{ xs: "left", md: "center" }}
-              fontSize={{ xs: 28, md: 28, lg: 30 }}
+              fontSize={{ xs: 20, md: 28, lg: 30 }}
               marginLeft={{ xs: 2, md: 2 }}
               letterSpacing={2}
-              mt={{ xs: 6, md: 28, lg: 12 }}
+              mt={{ xs:3 , md: 28, lg: 12 }}
+              sx={{textShadow: {xs: '2px 2px 2px black', md: '0'}}}
             >
               Hi there, Let's{" "}
               <em className="font-highlighted" style={{ color: "white" }}>
@@ -94,14 +97,14 @@ export default function Layout({ children }) {
 
             <Typography
               variant="h6"
-              textAlign={{ xs: "left", md: "center" }}
-              fontSize={{ xs: 22, md: 28, lg: 30 }}
+              textAlign={{ xs: "center", md: "center" }}
+              fontSize={{ xs: 18, md: 28, lg: 30 }}
               letterSpacing={2}
               bgcolor={"#202124"}
               color={'black !important'}
               p={2}
               borderRadius={5}
-              marginY={{ xs: 2, md: 2 }}
+              marginY={{ xs: 3, md: 2 }}
               width={{ xs: "90%", md: "100%" }}
             >
               <Typer

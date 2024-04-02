@@ -402,7 +402,11 @@ em {
   }
 
   .button-scroll {
-    bottom: -5.5rem;
+    height: 30px;
+  width: 20px;
+
+  border: 2px solid white;
+    bottom: 4.3rem
   }
 }
 
