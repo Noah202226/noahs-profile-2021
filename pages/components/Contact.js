@@ -63,19 +63,43 @@ const Contact = () => {
           height={"100%"}
           p={{ xs: 2, md: 3 }}
         >
-          <Image src={"/email.svg"} alt="image" width={150} height={150} />
+          <Image src={"/email.svg"} alt="image" width={120} height={120} />
+          <Typography
+            variant="body"
+            sx={{
+              fontSize: { xs: 36, md: 28, lg: 22 },
+              my: { xs: 5, md: 0 },
+              alignItems: 'end',
+              justifyContent: 'end'
+            }}
+          >
+            Contact: 09456738504
+          </Typography>
+          <Typography
+            variant="body"
+            sx={{
+              fontSize: { xs: 36, md: 28, lg: 22 },
+              my: { xs: 5, md: 0 },
+              alignItems: 'self-start',
+              justifyContent: 'start'
+            }}
+          >
+            Email: noaligpitan@gmail.com
+          </Typography>
           <Typography
             variant="body"
             sx={{
               textAlign: { xs: "center", md: "left" },
-              fontSize: { xs: 36, md: 28, lg: 30 },
-              my: { xs: 5, md: 0 },
+              fontSize: { xs: 36, md: 28, lg: 16 },
+              my: { xs: 5, md: 2 },
             }}
           >
             If you have questions and want to get in touch, use the form. I will
             appreciate your message and will response as soon as possible. Thank
             you.
           </Typography>
+
+          
         </Stack>
       </Grid>
 

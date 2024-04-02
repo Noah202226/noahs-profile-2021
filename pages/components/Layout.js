@@ -32,7 +32,10 @@ export default function Layout({ children }) {
           <Box
             display={"flex"}
             flexDirection={"column"}
-            height={"70%"}
+          
+            sx={{
+              height: { xs: "100vh", lg: "75%" },
+            }}
             alignItems={"center"}
             justifyContent={{ xs: "space-evenly" }}
           >
@@ -41,7 +44,7 @@ export default function Layout({ children }) {
                 variant="h1"
                 textAlign={{ xs: "left", md: "center" }}
                 fontSize={{ xs: 70, md: 76, lg: 106 }}
-                marginY={{ xs: 2, md: 2 }}
+                marginY={{ xs: 2, md: 0 }}
                 marginLeft={{ xs: 2, md: 2 }}
                 letterSpacing={5}
                 sx={{ transition: ".5s ease" }}

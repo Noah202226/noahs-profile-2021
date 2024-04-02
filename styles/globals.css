@@ -316,7 +316,7 @@ em {
   border: 2px solid black;
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 1rem;
 
   border-radius: 1rem;
 }
@@ -366,6 +366,10 @@ em {
 
   #media-scroller2 {
     grid-auto-columns: 100%;
+  }
+
+  .button-scroll {
+    bottom: .5rem;
   }
 }
 
