@@ -117,7 +117,7 @@ em {
 
 .apps-images {
   width: 100%;
-  height: 100%;
+  height: 250px;
 }
 .navlink {
   padding: 1rem;
@@ -142,6 +142,24 @@ em {
 .card.show {
   transform: translateX(0);
   opacity: 1;
+}
+.media-card {
+  z-index: 999;
+
+  padding: 0.2rem;
+  top: 1rem;
+  right: 0;
+
+  box-shadow: none !important;
+
+  /* background-color: #202124; */
+  color: #202124;
+
+  /* border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem; */
+  /* border-bottom: 2px solid var(---div-title-bg); */
+
+  opacity: 0.9;
 }
 
 /* Image slider */

@@ -639,14 +639,15 @@ export default function Home() {
                 "Vercel",
                 "Nodemailer",
               ]}
+              // code={"https://github.com/Noah202226/rsbc-official"}
             />
 
             <CardMediaProgram
-              ImageSrc={"/chords-finder-app.PNG"}
-              title={"Chords Finder App"}
-              altImage={"chords finder app"}
-              description={"Image chords organizer, to easy find chords"}
-              link={"https://music-ministry-chord-finder.web.app/"}
+              ImageSrc={"/Erha.png"}
+              altImage={"Research Paper Sample"}
+              title={"Research Paper"}
+              description={"Student projects/research that I built"}
+              link={"https://erha-3686e.web.app/"}
               techUsedArray={["Next JS", "Material UI", "Firebase"]}
             />
 
@@ -660,11 +661,11 @@ export default function Home() {
             />
 
             <CardMediaProgram
-              ImageSrc={"/Erha.png"}
-              altImage={"Research Paper Sample"}
-              title={"Research Paper"}
-              description={"Student projects/research that I built"}
-              link={"https://erha-3686e.web.app/"}
+              ImageSrc={"/chords-finder-app.PNG"}
+              title={"Chords Finder App"}
+              altImage={"chords finder app"}
+              description={"Image chords organizer, to easy find chords"}
+              link={"https://music-ministry-chord-finder.web.app/"}
               techUsedArray={["Next JS", "Material UI", "Firebase"]}
             />
           </Grid>

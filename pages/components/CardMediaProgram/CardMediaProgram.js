@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 
 import React from "react";
 import Image from "next/image";
-import { Box, Grid, Stack } from "@mui/material";
+import { Box, Chip, Grid, Stack } from "@mui/material";
 
 export default function CardMediaProgram({
   ImageSrc,
@@ -26,9 +26,10 @@ export default function CardMediaProgram({
           src={ImageSrc}
           alt={altImage}
           width={560}
-          height={200}
+          height={560}
         />
       </Box>
+
       <CardContent>
         <Stack
           flexDirection={"row"}
@@ -36,12 +37,21 @@ export default function CardMediaProgram({
           justifyContent={"space-between"}
         >
           <Stack>
-            <Typography gutterBottom variant="h5" component="div">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {description}
-            </Typography>
+            <div className="media-card">
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                color={"black"}
+              >
+                {title}
+              </Typography>
+            </div>
+            <div className="media-card">
+              <Typography variant="body2" color={"black"}>
+                {description}
+              </Typography>
+            </div>
           </Stack>
 
           <Stack
@@ -49,12 +59,12 @@ export default function CardMediaProgram({
             alignItems={"flex-end"}
             justifyContent={"flex-end"}
             height={"100%"}
-            bgcolor={"var(---div-title-bg)"}
+            bgcolor={"#202124"}
           >
             <Button variant="filed" size="small" target="_blank" href={link}>
               View
             </Button>
-            {/* <Button variant="filed" size="small" color="warning">
+            {/* <Button variant="filed" size="small" target="_blank" href={code}>
               Code
             </Button> */}
           </Stack>
@@ -63,17 +73,28 @@ export default function CardMediaProgram({
       <CardActions>
         <Grid container mx={2}>
           <Grid item xs={12} md={12}>
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography
+              gutterBottom
+              variant="h6"
+              component="div"
+              color={"black"}
+              borderTop={"2px solid"}
+              textAlign={"end"}
+            >
               Technology I used
             </Typography>
 
             <Stack
               flexDirection={"row"}
               alignItems={"center"}
-              justifyContent={"space-between"}
+              justifyContent={"flex-end"}
             >
               {techUsedArray?.map((tech) => (
-                <Typography key={tech}>{tech}</Typography>
+                <Chip
+                  label={tech}
+                  sx={{ backgroundColor: "#202124" }}
+                  key={tech}
+                />
               ))}
             </Stack>
           </Grid>
