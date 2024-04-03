@@ -69,31 +69,29 @@ const Contact = () => {
             sx={{
               fontSize: { xs: 18, md: 28, lg: 22 },
               my: { xs: 5, md: 0 },
-              alignItems: 'end',
-              justifyContent: 'end',
-              color: 'black'
+              alignItems: "end",
+              justifyContent: "end",
+              color: "black",
             }}
           >
             Contact: 09456738504
             <br />
             Email: noaligpitan@gmail.com
           </Typography>
-         
+
           <Typography
             variant="body"
             sx={{
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "center", md: "center" },
               fontSize: { xs: 18, md: 28, lg: 16 },
               my: { xs: 5, md: 2 },
-              color: 'black'
+              color: "black",
             }}
           >
             If you have questions and want to get in touch, use the form. I will
             appreciate your message and will response as soon as possible. Thank
             you.
           </Typography>
-
-          
         </Stack>
       </Grid>
 
@@ -106,7 +104,7 @@ const Contact = () => {
             fontSize: { xs: 36, md: 28, lg: 46 },
             fontFamily: "Lato, sans-serif",
             my: { xs: 0, md: 2 },
-            color: 'black'
+            color: "black",
             // fontStyle: "italic",
           }}
         >
@@ -160,14 +158,16 @@ const Contact = () => {
               <Button
                 type="submit"
                 variant="contained"
-                color="primary"
                 sx={{
                   padding: 1,
-                  width: { xs: "100%", md: "200px" },
+                  width: { xs: "100%", md: "100px" },
                   textAlign: { xs: "center", md: "left" },
-                  fontSize: { xs: 26, md: 28, lg: 30 },
+                  fontSize: { xs: 26, md: 28, lg: 22 },
                   fontFamily: "Lato, sans-serif",
                   fontWeight: { xs: "bold", md: "normal" },
+                  borderRadius: 5,
+                  color: "white",
+                  backgroundColor: "#202124",
                 }}
               >
                 {isSending ? "Sending ..." : "Submit"}

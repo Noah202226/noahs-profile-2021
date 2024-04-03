@@ -42,10 +42,14 @@ const Slider = ({
   return (
     <div className="container-slider">
       <div className="slider-card">
-        <Typography variant="h6" textAlign={"right"} color={'black'}>
+        <Typography variant="h6" textAlign={"right"} color={"black"}>
           {appTitle}
         </Typography>
-        <Typography>{appDescription}</Typography>
+      </div>
+      <div className="slider-card2">
+        <Typography variant="body1" textAlign={"center"} color={"white"} p={1}>
+          {appDescription}
+        </Typography>
       </div>
       {images?.map((obj, index) => {
         // Calculate the image URL based on the slideIndex

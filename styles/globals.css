@@ -175,6 +175,25 @@ em {
 
   opacity: 0.9;
 }
+.slider-card2 {
+  position: absolute;
+  z-index: 999;
+
+  padding: 0.2rem;
+  bottom: 2rem;
+
+  box-shadow: none !important;
+
+  background-color: #202124;
+  color: white;
+
+  right: 0;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom: 2px solid var(---div-title-bg);
+
+  opacity: 0.9;
+}
 .container-slider > :not(.dots-container) {
   box-shadow: -0.1rem 0.2rem 0.2rem black;
 }

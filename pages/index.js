@@ -116,6 +116,7 @@ export default function Home() {
               bottom: "1rem",
               right: "1rem",
               color: "white",
+              backgroundColor: "#202124",
             }}
             variant="extended"
             color="primary"
@@ -715,7 +716,13 @@ export default function Home() {
             id="media-scroller2"
             className="card media-scroller snap-inline"
           >
-            <Slider images={dentalImages} appTitle={"Dental Clinic System"} />
+            <Slider
+              images={dentalImages}
+              appTitle={"Dental Clinic System"}
+              appDescription={
+                "Application that help track and monitor customer data to easily suggest what they needs."
+              }
+            />
             {/* <Slider images={dentalImages} appTitle={"Dental Clinic System"} /> */}
           </Grid>
         </Grid>

@@ -108,7 +108,7 @@ export default function Layout({ children }) {
                 width={{ xs: "90%", md: "100%" }}
               >
                 <Typer
-                  textToType={`Aims to help startup to build application to manage their business`}
+                  textToType={`Assists enterprises in developing apps to streamline operations.`}
                   speed={20}
                 />
               </Typography>
