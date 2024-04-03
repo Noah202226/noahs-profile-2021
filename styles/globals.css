@@ -12,7 +12,7 @@
   color: white;
 }
 
-p{
+p {
   color: black;
 }
 body {
@@ -49,7 +49,6 @@ body::-webkit-scrollbar-thumb:hover {
   position: relative;
   height: 100vh; /* Adjust the height as needed */
   overflow: hidden;
-
 }
 
 #video-bg {
@@ -60,13 +59,12 @@ body::-webkit-scrollbar-thumb:hover {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: .8;
+  opacity: 0.8;
 }
 .content {
   position: relative;
   z-index: 1;
 }
-
 
 #hero {
   background-repeat: no-repeat;
@@ -81,7 +79,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-a:hover{
+a:hover {
   color: #202124;
   text-shadow: #f1f1f1 3px 2px 1px;
 }
@@ -349,8 +347,7 @@ em {
   border: 2px solid white;
   position: absolute;
   left: 50%;
-  bottom: 2rem;
-
+  bottom: -2rem;
   border-radius: 1rem;
 }
 
@@ -403,10 +400,14 @@ em {
 
   .button-scroll {
     height: 30px;
-  width: 20px;
+    width: 20px;
 
-  border: 2px solid white;
-    bottom: 4.3rem
+    border: 2px solid white;
+    bottom: 0.2rem;
+  }
+
+  li a {
+    color: #0b1f22;
   }
 }
 
