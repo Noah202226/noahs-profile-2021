@@ -32,22 +32,22 @@ export default function Layout({ children }) {
             alignItems={"center"}
             justifyContent="space-around"
             sx={{
-              height: { xs: "100%", lg: "100vh" },
+              height: { xs: "100vh", lg: "100vh" },
             }}
           >
             <Box
               display={"flex"}
               flexDirection={"column"}
               sx={{
-                height: { xs: "100vh", lg: "75%" },
+                height: { xs: "80vh", lg: "75%" },
               }}
-              alignItems={"center"}
-              justifyContent={{ xs: "start", md: "space-between" }}
+              alignItems={{ xs: "center", md: "center" }}
+              justifyContent={{ xs: "space-around", md: "space-between" }}
             >
               <Box>
                 <Typography
                   variant="h1"
-                  textAlign={{ xs: "left", md: "center" }}
+                  textAlign={{ xs: "center", md: "center" }}
                   fontSize={{ xs: 60, md: 76, lg: 106 }}
                   marginY={{ xs: 6, md: 5 }}
                   marginLeft={{ xs: 2, md: 2 }}

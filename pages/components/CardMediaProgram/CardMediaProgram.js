@@ -48,7 +48,7 @@ export default function CardMediaProgram({
               </Typography>
             </div>
             <div className="media-card">
-              <Typography variant="body2" color={"black"}>
+              <Typography variant="body2" color={"black"} noWrap width={"80%"}>
                 {description}
               </Typography>
             </div>

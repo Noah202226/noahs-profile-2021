@@ -636,7 +636,7 @@ export default function Home() {
                 "Next JS",
                 "Material UI",
                 "Firebase",
-                "Vercel",
+
                 "Nodemailer",
               ]}
               // code={"https://github.com/Noah202226/rsbc-official"}

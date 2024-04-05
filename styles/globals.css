@@ -419,7 +419,7 @@ em {
   }
 
   #media-scroller {
-    grid-auto-columns: 95%;
+    grid-auto-columns: 100%;
   }
   .to-hide-in-mobile {
     display: none;
