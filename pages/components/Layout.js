@@ -90,7 +90,7 @@ export default function Layout({ children }) {
               >
                 Hi there, Let's{" "}
                 <em className="font-highlighted" style={{ color: "white" }}>
-                  Designs
+                  Designs 1
                 </em>{" "}
                 and <em className="font-highlighted">Develop</em> your products.
               </Typography>
