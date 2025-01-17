@@ -1,0 +1,467 @@
+:root {
+  ---font-color: white;
+
+  ---contact-bg: #202124;
+  ---div-title-bg: rgb(246, 235, 230);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+p {
+  color: black;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  background-color: var(---contact-bg);
+  color: var(---font-color);
+  font-family: "Lato", sans-serif !important;
+  overflow-x: hidden;
+}
+/* Customize Scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+  overflow-y: auto;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #0b1f22;
+}
+
+.hero {
+  position: relative;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+#hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/coding-bg.mp4");
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #202124;
+  text-shadow: #f1f1f1 3px 2px 1px;
+}
+
+em {
+  color: crimson;
+  text-decoration: underline;
+}
+
+.navbar {
+  transition: all 0.5s ease-in !important;
+  color: white !important;
+  background: var(---contact-bg) !important;
+}
+
+.developer {
+  /* background-image: url("/florid-software-developer.gif"); */
+  background-size: contain;
+  object-fit: contain;
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+
+  color: var(---font-color) !important;
+}
+
+.designer {
+  background-image: url("/beam-web-design-program-on-laptop-screen.gif");
+  background-size: contain;
+  object-fit: contain;
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+
+  color: var(---font-color) !important;
+}
+
+.apps-images {
+  width: 100%;
+  height: 250px;
+}
+.navlink {
+  padding: 1rem;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+
+.layout-images {
+  width: 100%;
+  height: 100%;
+}
+
+/* Card Animation */
+
+.card {
+  transform: translateX(5px);
+  opacity: 0;
+  transition: 1000ms;
+}
+.card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.media-card {
+  z-index: 999;
+
+  padding: 0.2rem;
+  top: 1rem;
+  right: 0;
+
+  box-shadow: none !important;
+
+  /* background-color: #202124; */
+  color: #202124;
+
+  /* border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem; */
+  /* border-bottom: 2px solid var(---div-title-bg); */
+
+  opacity: 0.9;
+}
+
+/* Image slider */
+.container-slider {
+  max-width: 1200px;
+  height: 500px;
+  position: relative;
+  box-shadow: -0.1rem 0.2rem 0.2rem black;
+
+  background-color: #555;
+
+  /* transform: translateX(50px); */
+
+  border-radius: 2rem;
+}
+.slider-card {
+  position: absolute;
+  z-index: 999;
+
+  padding: 0.2rem;
+  top: 1rem;
+
+  box-shadow: none !important;
+
+  background-color: rgb(255, 255, 255);
+
+  right: 0;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom: 2px solid var(---div-title-bg);
+
+  opacity: 0.9;
+}
+.slider-card2 {
+  position: absolute;
+  z-index: 999;
+
+  padding: 0.2rem;
+  bottom: 2rem;
+
+  box-shadow: none !important;
+
+  background-color: #202124;
+  color: white;
+
+  right: 0;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom: 2px solid var(---div-title-bg);
+
+  opacity: 0.9;
+}
+.container-slider > :not(.dots-container) {
+  box-shadow: -0.1rem 0.2rem 0.2rem black;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.8s;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.active-anim {
+  opacity: 1;
+}
+.btn-slide {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity ease 0.5s;
+}
+.btn-slide:hover {
+  opacity: 1;
+}
+
+.btn-slide img {
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+}
+.prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-60%);
+}
+.next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-60%);
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background: none;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  margin: 0 5px;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+.dot.active {
+  background: rgb(32, 32, 32);
+}
+
+/* Horizontal Scroller on sample programs */
+
+#media-scroller {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 49%;
+
+  /* background-color: red;
+  display: flex;
+  flex-flow: row;
+  padding: 1rem; */
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+#media-scroller2 {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 70%;
+
+  /* background-color: red;
+  display: flex;
+  flex-flow: row;
+  padding: 1rem; */
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.snap-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+.snap-inline > * {
+  scroll-snap-align: start;
+}
+#media-scroller > * {
+  box-shadow: -0.1rem 0.2rem 0.2rem black;
+  /* flex-shrink: 0; */
+}
+#media-scroller::-webkit-scrollbar {
+  height: 0.3rem;
+}
+/* Track */
+#media-scroller::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#media-scroller::-webkit-scrollbar-thumb {
+  background: #555;
+}
+#media-scroller2 > * {
+  box-shadow: -0.1rem 0.2rem 0.2rem black;
+  /* flex-shrink: 0; */
+}
+#media-scroller2::-webkit-scrollbar {
+  height: 0.3rem;
+}
+/* Track */
+#media-scroller2::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#media-scroller2::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+.font-highlighted {
+  transition: all ease-in 2s;
+}
+.font-highlighted:hover {
+  top: -0.1rem !important;
+  position: relative !important;
+  text-decoration: none;
+}
+
+.software-icons {
+  cursor: alias;
+  opacity: 0.7;
+}
+.software-icons:hover {
+  cursor: pointer;
+  scale: 1.2;
+  opacity: 1;
+}
+
+/* Button scroll */
+.button-scroll-container {
+  position: relative;
+}
+.button-scroll {
+  height: 50px;
+  width: 30px;
+
+  border: 2px solid white;
+  position: absolute;
+  left: 50%;
+  bottom: -2rem;
+  border-radius: 1rem;
+}
+
+.button-scroll::after,
+.button-scroll::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid white;
+
+  height: 5px;
+  width: 5px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.button-scroll::after {
+  top: 30%;
+  animation-delay: 3s;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+  .container-slider {
+    height: 500px;
+    /* margin: 100px 10px 0; */
+    transform: translateX(0);
+  }
+
+  #media-scroller {
+    grid-auto-columns: 100%;
+  }
+  .to-hide-in-mobile {
+    display: none;
+  }
+
+  .software-icons {
+    cursor: alias;
+    opacity: 1;
+    scale: 0.5;
+  }
+
+  #media-scroller2 {
+    grid-auto-columns: 100%;
+  }
+
+  .button-scroll {
+    height: 30px;
+    width: 20px;
+
+    border: 2px solid white;
+    bottom: 0.2rem;
+  }
+
+  li a {
+    color: #0b1f22;
+  }
+}
+
+/* Keyframes animation */
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
