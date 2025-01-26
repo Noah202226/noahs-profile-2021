@@ -90,7 +90,7 @@ export default function Layout({ children }) {
               >
                 Hi there, Let's{" "}
                 <em className="font-highlighted" style={{ color: "white" }}>
-                  Designs 1
+                  Design
                 </em>{" "}
                 and <em className="font-highlighted">Develop</em> your products.
               </Typography>
@@ -108,7 +108,7 @@ export default function Layout({ children }) {
                 width={{ xs: "90%", md: "100%" }}
               >
                 <Typer
-                  textToType={`Assists enterprises in developing apps to streamline operations.`}
+                  textToType={`Assist enterprises in developing applications to streamline operations.`}
                   speed={20}
                 />
               </Typography>
