@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { Link } from "react-scroll";
 
@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import useScrollTrigger from '@mui/material/useScrollTrigger';
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 import MenuItem from "@mui/material/MenuItem";
 
@@ -63,12 +63,12 @@ export default function Header(props) {
       threshold: 0,
       target: window ? window() : undefined,
     });
-  
+
     return React.cloneElement(children, {
       elevation: trigger ? 4 : 0,
     });
   }
-  
+
   ElevationScroll.propTypes = {
     children: PropTypes.element.isRequired,
     /**
@@ -79,154 +79,170 @@ export default function Header(props) {
   };
   return (
     <ElevationScroll {...props}>
-    <AppBar
-      position="fixed"
-      elevation={0}
-      sx={{ opacity: 0.9, background: "transparent" }}
-      className={navbarBackground ? "navbar" : ""}
-    >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Link href={"/"} to="hero" smooth={true} offset={-100} duration={400}>
-            <Typography
-              variant="h6"
-              noWrap
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "Lato, sans-serif",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "white",
-                textDecoration: "none",
-              }}
+      <AppBar
+        position="fixed"
+        elevation={0}
+        sx={{ opacity: 0.9, background: "transparent" }}
+        className={navbarBackground ? "navbar" : ""}
+      >
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Link
+              href={"/"}
+              to="hero"
+              smooth={true}
+              offset={-100}
+              duration={400}
             >
-              <Image src={"/nl.png"} alt="NL logo" width={26} height={26} />
-            </Typography>
-          </Link>
+              <Typography
+                variant="h6"
+                noWrap
+                sx={{
+                  mr: 2,
+                  display: { xs: "none", md: "flex" },
+                  fontFamily: "Lato, sans-serif",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                <Image src={"/nl.png"} alt="NL logo" width={26} height={26} />
+              </Typography>
+            </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="white"
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="white"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                {pages.length > 0 &&
+                  pages.map((page) => (
+                    <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                      <Link
+                        href={page.path}
+                        to={page.target}
+                        onClick={handleCloseNavMenu}
+                        style={{ fontFamily: "Lato, sans-serif" }}
+                      >
+                        {page.name}
+                      </Link>
+                    </MenuItem>
+                  ))}
+              </Menu>
+            </Box>
+
+            <Link
+              href={"/"}
+              to="hero"
+              smooth={true}
+              offset={-100}
+              duration={400}
             >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
+              <Typography
+                variant="h5"
+                noWrap
+                sx={{
+                  mr: 2,
+                  display: { xs: "flex", md: "none" },
+                  flexGrow: 1,
+                  fontFamily: "Lato, sans-serif",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                <Image src={"/nl.png"} alt="NL logo" width={26} height={26} />
+              </Typography>
+            </Link>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.length > 0 &&
                 pages.map((page) => (
-                  <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                    <Link
-                      href={page.path}
-                      to={page.target}
-                      onClick={handleCloseNavMenu}
-                      style={{ fontFamily: "Lato, sans-serif" }}
-                    >
-                      {page.name}
-                    </Link>
-                  </MenuItem>
+                  <Link
+                    className="navlink"
+                    // href={page.target}
+                    to={page.target}
+                    key={page.id}
+                    smooth={true}
+                    offset={-80}
+                    duration={400}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      fontFamily: "Lato, sans-serif",
+                    }}
+                    download={true}
+                  >
+                    {page.name}
+                  </Link>
                 ))}
-            </Menu>
-          </Box>
+            </Box>
 
-          <Link href={"/"} to="hero" smooth={true} offset={-100} duration={400}>
-            <Typography
-              variant="h5"
-              noWrap
+            <Box
               sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-                fontFamily: "Lato, sans-serif",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "white",
-                textDecoration: "none",
+                display: { xs: "none", md: "flex" },
+                justifyContent: "flex-end",
               }}
             >
-              <Image src={"/nl.png"} alt="NL logo" width={26} height={26} />
-            </Typography>
-          </Link>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.length > 0 &&
-              pages.map((page) => (
-                <Link
-                  className="navlink"
-                  // href={page.target}
-                  to={page.target}
-                  key={page.id}
-                  smooth={true}
-                  offset={-80}
-                  duration={400}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", fontFamily: "Lato, sans-serif" }}
-                  download={true}
+              <Tooltip title="Download CV" arrow>
+                <IconButton href="/Noah-Update-CV.pdf" target="_blank" download>
+                  <Image
+                    src={"/file-new.svg"}
+                    alt="download resume"
+                    width={20}
+                    height={20}
+                  />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="Facebook" arrow>
+                <IconButton
+                  href="https://www.facebook.com/noaligpitan26"
+                  target="_blank"
                 >
-                  {page.name}
-                </Link>
-              ))}
-          </Box>
+                  <Facebook color="red" />
+                </IconButton>
+              </Tooltip>
 
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "flex-end",
-            }}
-          >
-            <Tooltip title="Download CV" arrow>
-              <IconButton href="/Noah-Update-CV.pdf" target="_blank" download>
-                <Image
-                  src={"/download-pdf.svg"}
-                  alt="download resume"
-                  width={20}
-                  height={20}
-                />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Facebook" arrow>
-              <IconButton
-                href="https://www.facebook.com/noaligpitan26"
-                target="_blank"
-              >
-                <Facebook color="red" />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Youtube" arrow>
-              <IconButton
-                href="https://www.youtube.com/channel/UCY7RgjrnESF5AxgjF2PLyRw"
-                target="_blank"
-              >
-                <YouTube />
-              </IconButton>
-            </Tooltip>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+              <Tooltip title="Youtube" arrow>
+                <IconButton
+                  href="https://www.youtube.com/channel/UCY7RgjrnESF5AxgjF2PLyRw"
+                  target="_blank"
+                >
+                  <YouTube />
+                </IconButton>
+              </Tooltip>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
     </ElevationScroll>
   );
 }
