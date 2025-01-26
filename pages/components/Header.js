@@ -211,17 +211,6 @@ export default function Header(props) {
                 justifyContent: "flex-end",
               }}
             >
-              <Tooltip title="Download CV" arrow>
-                <IconButton href="/Noah-Update-CV.pdf" target="_blank" download>
-                  <Image
-                    src={"/file-new.svg"}
-                    alt="download resume"
-                    width={20}
-                    height={20}
-                  />
-                </IconButton>
-              </Tooltip>
-
               <Tooltip title="Facebook" arrow>
                 <IconButton
                   href="https://www.facebook.com/noaligpitan26"
@@ -237,6 +226,17 @@ export default function Header(props) {
                   target="_blank"
                 >
                   <YouTube />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="Download CV" arrow>
+                <IconButton href="/Noah-Update-CV.pdf" target="_blank" download>
+                  <Image
+                    src={"/file-new.svg"}
+                    alt="download resume"
+                    width={20}
+                    height={20}
+                  />
                 </IconButton>
               </Tooltip>
             </Box>
