@@ -230,7 +230,11 @@ export default function Header(props) {
               </Tooltip>
 
               <Tooltip title="Download CV" arrow>
-                <IconButton href="/Noah-Update-CV.pdf" target="_blank" download>
+                <IconButton
+                  href="/Noa CV Resume 2025.pdf"
+                  target="_blank"
+                  download
+                >
                   <Image
                     src={"/file-new.svg"}
                     alt="download resume"
