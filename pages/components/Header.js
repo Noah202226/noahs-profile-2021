@@ -211,18 +211,18 @@ export default function Header(props) {
                 justifyContent: "flex-end",
               }}
             >
-              <Tooltip title="Facebook" arrow>
+              <Tooltip title="Facebook/NoaArc26" arrow>
                 <IconButton
-                  href="https://www.facebook.com/noaligpitan26"
+                  href="https://www.facebook.com/NoaArc26"
                   target="_blank"
                 >
                   <Facebook color="red" />
                 </IconButton>
               </Tooltip>
 
-              <Tooltip title="Youtube" arrow>
+              <Tooltip title="Youtube/@devBrosPh" arrow>
                 <IconButton
-                  href="https://www.youtube.com/channel/UCY7RgjrnESF5AxgjF2PLyRw"
+                  href="https://www.youtube.com/@devBrosPh"
                   target="_blank"
                 >
                   <YouTube />
@@ -231,7 +231,7 @@ export default function Header(props) {
 
               <Tooltip title="Download CV" arrow>
                 <IconButton
-                  href="/Noa CV Resume 2025.pdf"
+                  href="/NOA RESUME 3-10-25.pdf"
                   target="_blank"
                   download
                 >

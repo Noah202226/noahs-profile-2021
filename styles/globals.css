@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb:hover {
 #hero {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../public/coding-bg.mp4");
+  background-image: url("../public/hero-bg.mp4");
 }
 
 ul {

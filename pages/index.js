@@ -643,20 +643,22 @@ export default function Home() {
             />
 
             <CardMediaProgram
+              ImageSrc={"/naomi-page.PNG"}
+              altImage={"Business Page"}
+              title={"Business Page application"}
+              description={
+                "Show your service in your business page also intergrate email sending. "
+              }
+              link={"https://naomi-creations.vercel.app/"}
+              techUsedArray={["Next JS", "DaisyUI", "Firebase", "Nodemailer"]}
+            />
+
+            <CardMediaProgram
               ImageSrc={"/Erha.png"}
               altImage={"Research Paper Sample"}
               title={"Research Paper"}
               description={"Student projects/research that I built"}
               link={"https://erha-3686e.web.app/"}
-              techUsedArray={["Next JS", "Material UI", "Firebase"]}
-            />
-
-            <CardMediaProgram
-              ImageSrc={"/sales-agent-app.PNG"}
-              altImage={"Sales Agent App"}
-              title={"Sales Agent Application"}
-              description={"Agent App that can monitor their possible clients"}
-              link={"https://noems-agent-dummy.web.app/"}
               techUsedArray={["Next JS", "Material UI", "Firebase"]}
             />
 

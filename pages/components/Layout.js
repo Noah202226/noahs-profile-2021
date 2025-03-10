@@ -52,9 +52,11 @@ export default function Layout({ children }) {
                   marginY={{ xs: 6, md: 5 }}
                   marginLeft={{ xs: 2, md: 2 }}
                   letterSpacing={5}
+                  color={"grey"}
                   sx={{
                     transition: ".5s ease",
                     textShadow: { xs: "2px 2px 2px black", md: "0" },
+                    color: "black !important",
                   }}
                 >
                   {<Typer textToType={"NOA LIGPITAN"} speed={100} />}
@@ -70,7 +72,7 @@ export default function Layout({ children }) {
                   sx={{
                     transition: ".5s ease",
                     fontStyle: "italic",
-                    color: "white",
+                    color: "black",
                     letterSpacing: ".5rem",
                     textShadow: { xs: "2px 2px 2px black", md: "0" },
                   }}
